@@ -39,7 +39,7 @@ function Navbar() {
               <div className='min-w-48 bg-stone-100 rounded flex flex-col gap-4 p-4'>
                 <p onClick={()=>navigate('MyProfile')}className='hover:text-blue-500 cursor-pointer'>My profile</p>
                 <p onClick={()=>navigate('MyAppointment')}className='hover:text-blue-500 cursor-pointer'>My Appointments</p>
-                <p onClick={()=>setToken(fa)} className='hover:text-blue-500 cursor-pointer'>Logout</p>
+                <p onClick={()=>setToken(false)} className='hover:text-blue-500 cursor-pointer'>Logout</p>
               </div>
             </div>
             </div>

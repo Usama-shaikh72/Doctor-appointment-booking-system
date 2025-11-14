@@ -8,4 +8,6 @@ export default defineConfig({
     primary: "5f6FFF",
   },
   plugins: [react(), tailwindcss()],
+   
 });
+
