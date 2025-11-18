@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { doctors } from '../assets/assets';
+import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { doctors, specialityData } from '../assets/assets';
 import { AppContext } from '../context/AppContext';
 
 function Doctors() {
@@ -25,16 +26,16 @@ function Doctors() {
     <div className="p-4">
       <p className="text-lg font-medium mb-4">Browse through the doctors specialist.</p>
 
-      <div className="flex gap-8">
+      <div className="flex flex-col sm:flex-row items-start gap-5 mt-5">
         
         {/* Left Sidebar */}
-        <div className="flex flex-col gap-2 w-48">
-          <p className="cursor-pointer hover:text-blue-600">General physician</p>
-          <p className="cursor-pointer hover:text-blue-600">Gynecologist</p>
-          <p className="cursor-pointer hover:text-blue-600">Dermatologist</p>
-          <p className="cursor-pointer hover:text-blue-600">Pediatricians</p>
-          <p className="cursor-pointer hover:text-blue-600">Neurologist</p>
-          <p className="cursor-pointer hover:text-blue-600">Gastroenterologist</p>
+        <div className="flex flex-col gap-4 text-sm text-gray-600">
+          <p onClick={()=> speciality==='Gynecologist'? navigate('/doctors'):navigate('/doctors/Gynecologist')} className={`w-[94vw] sm:w-auto p1-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality==='Gynecologist'? "bg-indigo-100 text-black":""}`}>Gynecologist</p>
+          <p onClick={()=> speciality==='Dermatologist'? navigate('/doctors'):navigate('/doctors/Dermatologist')} className={`w-[94vw] sm:w-auto p1-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality==='Dermatologist'? "bg-indigo-100 text-black":""}`}>Dermatologist</p>
+          <p onClick={()=> speciality==='General physician'? navigate('/doctors'):navigate('/doctors/General physician')} className={`w-[94vw] sm:w-auto p1-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality==='General physician'? "bg-indigo-100 text-black":""}`}>General physician</p>
+          <p onClick={()=> speciality==='Pediatricians'? navigate('/doctors'):navigate('/doctors/Pediatricians')} className={`w-[94vw] sm:w-auto p1-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality==='Pediatricians'? "bg-indigo-100 text-black":""}`}>Pediatricians</p>
+          <p onClick={()=> speciality==='Neurologist'? navigate('/doctors'):navigate('/doctors/Neurologist')} className={`w-[94vw] sm:w-auto p1-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality==='Neurologist'? "bg-indigo-100 text-black":""}`}>Neurologist</p>
+          <p onClick={()=> speciality==='Gastroenterologist'? navigate('/doctors'):navigate('/doctors/Gastroenterologist')} className={`w-[94vw] sm:w-auto p1-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality==='Gastroenterologist'? "bg-indigo-100 text-black":""}`}>Gastroenterologist</p>
         </div>
 
         {/* Doctors List */}
