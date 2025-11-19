@@ -35,7 +35,6 @@ function Doctors() {
           <p onClick={()=> speciality==='General physician'? navigate('/doctors'):navigate('/doctors/General physician')} className={`w-[94vw] sm:w-auto p1-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality==='General physician'? "bg-indigo-100 text-black":""}`}>General physician</p>
           <p onClick={()=> speciality==='Pediatricians'? navigate('/doctors'):navigate('/doctors/Pediatricians')} className={`w-[94vw] sm:w-auto p1-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality==='Pediatricians'? "bg-indigo-100 text-black":""}`}>Pediatricians</p>
           <p onClick={()=> speciality==='Neurologist'? navigate('/doctors'):navigate('/doctors/Neurologist')} className={`w-[94vw] sm:w-auto p1-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality==='Neurologist'? "bg-indigo-100 text-black":""}`}>Neurologist</p>
-          <p onClick={()=> speciality==='Gastroenterologist'? navigate('/doctors'):navigate('/doctors/Gastroenterologist')} className={`w-[94vw] sm:w-auto p1-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality==='Gastroenterologist'? "bg-indigo-100 text-black":""}`}>Gastroenterologist</p>
         </div>
 
         {/* Doctors List */}
